@@ -1,0 +1,10 @@
+Si nous devions rajouter un autre mode de livraison, ou alors un tarif différent selon le nom du transporteur ou encore selon le pays, le code de cette fonction deviendrait complètement in-maintenable.
+
+Nous allons donc rendre ce code compatible avec le principe OCP, en utilisant une nouvelle notion : le polymorphisme.
+
+****************
+Créer un objet  ShippingType  qui prend une commande en paramètre permet de :
+
+- bien séparer les responsabilités de chacun (SRP) ;
+
+- pouvoir créer un type de  ShippingType  par véhicule (OCP).
